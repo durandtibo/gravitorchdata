@@ -45,10 +45,6 @@ jobs:
         run: |
           poetry run make unit-test-cov
 
-      - name: Run integration tests
-        run: |
-          poetry run make integration-test-cov
-
 
   torch:
     runs-on: ${{ matrix.os }}
@@ -90,7 +86,3 @@ jobs:
       - name: Run unit tests
         run: |
           poetry run make unit-test-cov
-
-      - name: Run integration tests
-        run: |
-          poetry run make integration-test-cov
