@@ -68,7 +68,7 @@ def is_dataloader2_creator_config(config: dict) -> bool:
 
     .. code-block:: pycon
 
-        >>> from gravitorch.creators.dataloader2 import is_dataloader2_creator_config
+        >>> from gravitorchdata.creators.dataloader2 import is_dataloader2_creator_config
         >>> is_dataloader2_creator_config(
         ...     {"_target_": "gravitorchdata.creators.dataloader2.DataLoader2Creator"}
         ... )
