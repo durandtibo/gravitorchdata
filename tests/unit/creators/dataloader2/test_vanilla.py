@@ -12,7 +12,7 @@ from torch.utils.data.datapipes.iter import IterableWrapper, Shuffler
 from torch.utils.data.datapipes.map import SequenceWrapper
 from torchdata.dataloader2 import (
     DataLoader2,
-    MultiProcessingReadingService,
+    InProcessReadingService,
     ReadingServiceInterface,
 )
 from torchdata.dataloader2.adapter import Adapter, Shuffle
@@ -141,7 +141,7 @@ def test_vanilla_dataloader2_creator_datapipe_adapter_fn(
     datapipe: IterDataPipe, datapipe_adapter_fn: Adapter | dict
 ) -> None:
     dataloader = VanillaDataLoader2Creator(
-        datapipe, datapipe_adapter_fn=datapipe_adapter_fn
+        Shuffler(datapipe), datapipe_adapter_fn=datapipe_adapter_fn
     ).create()
     assert isinstance(dataloader, DataLoader2)
     assert isinstance(dataloader.datapipe, Shuffler)
@@ -154,8 +154,8 @@ def test_vanilla_dataloader2_creator_datapipe_adapter_fn(
 @mark.parametrize(
     "reading_service",
     (
-        MultiProcessingReadingService(),
-        {OBJECT_TARGET: "torchdata.dataloader2.MultiProcessingReadingService"},
+        InProcessReadingService(),
+        {OBJECT_TARGET: "torchdata.dataloader2.InProcessReadingService"},
     ),
 )
 def test_vanilla_dataloader2_creator_reading_service(
@@ -166,5 +166,5 @@ def test_vanilla_dataloader2_creator_reading_service(
     assert isinstance(dataloader, DataLoader2)
     assert isinstance(dataloader.datapipe, IterableWrapper)
     assert dataloader.datapipe_adapter_fns is None
-    assert isinstance(dataloader.reading_service, MultiProcessingReadingService)
+    assert isinstance(dataloader.reading_service, InProcessReadingService)
     assert tuple(dataloader) == (1, 2, 3, 4, 5)
