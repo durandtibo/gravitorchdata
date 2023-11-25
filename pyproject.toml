@@ -28,7 +28,7 @@ packages = [
 
 [tool.poetry.dependencies]
 # Core dependencies
-gravitorch = ">=0.0.23a0,<0.0.24"
+gravitorch = ">=0.0.23a1,<0.0.24"
 python = ">=3.9,<3.12"
 torch = ">=2.0.0,<2.2.0"
 torchdata = ">=0.6,<0.8"

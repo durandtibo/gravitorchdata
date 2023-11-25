@@ -7,12 +7,12 @@ from collections.abc import Mapping
 from typing import Any, TypeVar
 
 from coola.utils import str_indent, str_mapping
-from gravitorch.creators.datastream.base import setup_datastream_creator
 from gravitorch.datasources.base import BaseDataSource, IterableNotFoundError
 from gravitorch.engines import BaseEngine
 from gravitorch.utils.asset import AssetManager
 
 from gravitorchdata.creators.datastream import BaseDataStreamCreator
+from gravitorchdata.creators.datastream.base import setup_datastream_creator
 from gravitorchdata.datastreams.base import BaseDataStream
 
 logger = logging.getLogger(__name__)
@@ -33,11 +33,11 @@ class VanillaDataSource(BaseDataSource):
     .. code-block:: pycon
 
         >>> from gravitorch.datasources import VanillaDataSource
-        >>> from gravitorch.creators.datastream import IterableDataStreamCreator
+        >>> from gravitorchdata.creators.datastream import IterableDataStreamCreator
         >>> datasource = VanillaDataSource(
         ...     {
         ...         "train": {
-        ...             "_target_": "gravitorch.creators.datastream.IterableDataStreamCreator",
+        ...             "_target_": "gravitorchdata.creators.datastream.IterableDataStreamCreator",
         ...             "iterable": [1, 2, 3, 4],
         ...         },
         ...         "eval": IterableDataStreamCreator(["a", "b", "c"]),
