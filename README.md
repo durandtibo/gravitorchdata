@@ -1,2 +1,3 @@
 # gravitorchdata
-Extension to use `torchdata` with `gravitorch`
+
+Plugin to use `torchdata` with `gravitorch`
