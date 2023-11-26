@@ -17,7 +17,7 @@ class BaseDataStream(Generic[T], ABC):
 
     .. code-block:: pycon
 
-        >>> from gravitorch.datastreams import IterableDataStream
+        >>> from gravitorchdata.datastreams import IterableDataStream
         >>> with IterableDataStream([1, 2, 3, 4, 5]) as datastream:
         ...     for batch in datastream:
         ...         print(batch)  # do something
@@ -48,7 +48,7 @@ class BaseDataStream(Generic[T], ABC):
 
         .. code-block:: pycon
 
-            >>> from gravitorch.datastreams import IterableDataStream
+            >>> from gravitorchdata.datastreams import IterableDataStream
             >>> datastream = IterableDataStream([1, 2, 3, 4, 5])
             >>> datastream.launch()
         """
@@ -61,7 +61,7 @@ class BaseDataStream(Generic[T], ABC):
 
         .. code-block:: pycon
 
-            >>> from gravitorch.datastreams import IterableDataStream
+            >>> from gravitorchdata.datastreams import IterableDataStream
             >>> datastream = IterableDataStream([1, 2, 3, 4, 5])
             >>> datastream.launch()
             >>> # do anything

@@ -12,7 +12,6 @@ from gravitorch.creators.datapipe.base import (
     setup_datapipe_creator,
 )
 from gravitorch.creators.datapipe.vanilla import DataPipeCreator
-from gravitorch.dataloaders import create_dataloader2, setup_dataloader2
 from gravitorch.datapipes.factory import is_datapipe_config
 from gravitorch.engines import BaseEngine
 from torch.utils.data import IterDataPipe, MapDataPipe
@@ -20,6 +19,7 @@ from torchdata.dataloader2 import DataLoader2, ReadingServiceInterface
 from torchdata.dataloader2.adapter import Adapter
 
 from gravitorchdata.creators.dataloader2.base import BaseDataLoader2Creator
+from gravitorchdata.dataloaders import create_dataloader2, setup_dataloader2
 
 T = TypeVar("T")
 
@@ -42,7 +42,7 @@ class DataLoader2Creator(BaseDataLoader2Creator[T]):
 
     .. code-block:: pycon
 
-        >>> from gravitorch.creators.dataloader2 import DataLoader2Creator
+        >>> from gravitorchdata.creators.dataloader2 import DataLoader2Creator
         >>> from torch.utils.data.datapipes.iter import IterableWrapper
         >>> from torchdata.dataloader2 import DataLoader2
         >>> creator = DataLoader2Creator(
