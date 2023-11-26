@@ -1,0 +1,19 @@
+name: Nightly Tests
+on:
+  schedule:
+    - cron: '50 10 * * *' # run at 10:50 AM UTC
+  workflow_dispatch:  # to trigger manually
+
+jobs:
+#  cyclic-imports:
+#    uses: ./.github/workflows/cyclic-imports.yaml
+  doctest:
+    uses: ./.github/workflows/doctest.yaml
+  format:
+    uses: ./.github/workflows/format.yaml
+  pre-commit:
+    uses: ./.github/workflows/pre-commit.yaml
+  test:
+    uses: ./.github/workflows/test.yaml
+  test-deps:
+    uses: ./.github/workflows/test-deps.yaml
