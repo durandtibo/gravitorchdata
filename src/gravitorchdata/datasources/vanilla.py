@@ -32,7 +32,7 @@ class VanillaDataSource(BaseDataSource):
 
     .. code-block:: pycon
 
-        >>> from gravitorch.datasources import VanillaDataSource
+        >>> from gravitorchdata.datasources import VanillaDataSource
         >>> from gravitorchdata.creators.datastream import IterableDataStreamCreator
         >>> datasource = VanillaDataSource(
         ...     {

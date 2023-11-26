@@ -98,7 +98,7 @@ def setup_dataloader2_creator(
 
     .. code-block:: pycon
 
-        >>> from gravitorch.creators.dataloader2 import setup_dataloader2_creator
+        >>> from gravitorchdata.creators.dataloader2 import setup_dataloader2_creator
         >>> creator = setup_dataloader2_creator(
         ...     {
         ...         "_target_": "gravitorchdata.creators.dataloader2.VanillaDataLoader2Creator",

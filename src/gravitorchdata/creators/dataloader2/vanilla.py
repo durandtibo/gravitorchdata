@@ -42,7 +42,7 @@ class DataLoader2Creator(BaseDataLoader2Creator[T]):
 
     .. code-block:: pycon
 
-        >>> from gravitorch.creators.dataloader2 import DataLoader2Creator
+        >>> from gravitorchdata.creators.dataloader2 import DataLoader2Creator
         >>> from torch.utils.data.datapipes.iter import IterableWrapper
         >>> from torchdata.dataloader2 import DataLoader2
         >>> creator = DataLoader2Creator(

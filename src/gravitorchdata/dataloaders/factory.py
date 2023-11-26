@@ -41,7 +41,7 @@ def create_dataloader2(
 
     .. code-block:: pycon
 
-        >>> from gravitorch.dataloaders import create_dataloader2
+        >>> from gravitorchdata.dataloaders import create_dataloader2
         >>> create_dataloader2(
         ...     {
         ...         "_target_": "torch.utils.data.datapipes.iter.IterableWrapper",
@@ -80,7 +80,7 @@ def is_dataloader2_config(config: dict) -> bool:
 
     .. code-block:: pycon
 
-        >>> from gravitorch.dataloaders import is_dataloader2_config
+        >>> from gravitorchdata.dataloaders import is_dataloader2_config
         >>> is_dataloader2_config({"_target_": "torchdata.dataloader2.DataLoader2"})
         True
     """
@@ -104,7 +104,7 @@ def setup_dataloader2(dataloader: DataLoader2 | dict) -> DataLoader2:
 
     .. code-block:: pycon
 
-        >>> from gravitorch.dataloaders import setup_dataloader2
+        >>> from gravitorchdata.dataloaders import setup_dataloader2
         >>> from torch.utils.data.datapipes.iter import IterableWrapper
         >>> dataloader = setup_dataloader2(
         ...     {
