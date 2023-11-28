@@ -35,7 +35,7 @@ torchdata = ">=0.6,<0.8"
 
 # Optional dependencies
 redcat = ">=0.0.16,<0.0.18"  # make optional
-startorch = ">=0.0.5,<0.0.8"  # make optional
+startorch = ">=0.0.7,<0.0.8"  # make optional
 
 [tool.poetry.extras]
 all = []
