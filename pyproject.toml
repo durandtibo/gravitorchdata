@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gravitorchdata"
-version = "0.0.1a0"
+version = "0.0.1a1"
 description = "Plugin to use torchdata with gravitorch"
 readme = "README.md"
 authors = ["Thibaut Durand <durand.tibo+gh@gmail.com>"]
@@ -28,12 +28,14 @@ packages = [
 
 [tool.poetry.dependencies]
 # Core dependencies
-gravitorch = ">=0.0.23a1,<0.0.24"
+gravitorch = ">=0.0.23,<0.0.24"
 python = ">=3.9,<3.12"
 torch = ">=2.0.0,<2.2.0"
 torchdata = ">=0.6,<0.8"
 
 # Optional dependencies
+redcat = ">=0.0.16,<0.0.18"  # make optional
+startorch = ">=0.0.5,<0.0.8"  # make optional
 
 [tool.poetry.extras]
 all = []
