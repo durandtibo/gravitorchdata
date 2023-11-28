@@ -54,7 +54,7 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         python-version: [ '3.9', '3.10', '3.11' ]
-        gravitorch-version: [ 0.0.23a1 ]
+        gravitorch-version: [ 0.0.23 ]
 
     steps:
       - name: Checkout

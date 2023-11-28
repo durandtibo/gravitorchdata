@@ -407,13 +407,13 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "gravitorch"
-version = "0.0.23a1"
+version = "0.0.23"
 description = "A library to train ML models with PyTorch"
 optional = false
 python-versions = ">=3.9,<3.12"
 files = [
-    {file = "gravitorch-0.0.23a1-py3-none-any.whl", hash = "sha256:fc7fcecd21a6505f01269f6ff02133c8786cdb237e19a22484a1097396c65306"},
-    {file = "gravitorch-0.0.23a1.tar.gz", hash = "sha256:3992e416f888df5d620047ed6e14bb5a21bbf6e60b37a6004cda6e62a35de9b1"},
+    {file = "gravitorch-0.0.23-py3-none-any.whl", hash = "sha256:5dd2b0fed2535c4d0e440b99e0cb59d957795bd8875d4d7ea7b1c432a2397a4b"},
+    {file = "gravitorch-0.0.23.tar.gz", hash = "sha256:0586ae455c67355304e64d27055a76281f4f9ef23766f0966a68dbdb903e2628"},
 ]
 
 [package.dependencies]
@@ -431,7 +431,7 @@ tabulate = ">=0.9,<0.10"
 torch = ">=2.0,<2.2"
 
 [package.extras]
-all = ["colorlog (>=6.7,<6.8)", "matplotlib (>=3.6,<3.9)", "pillow (>=9.0,<11.0)", "psutil (>=5.9,<5.10)", "startorch (>=0.0.5,<0.0.8)", "tensorboard (>=2.10,<2.16)", "torchdata (>=0.6,<0.8)", "tqdm (>=4.64,<4.67)"]
+all = ["colorlog (>=6.7,<6.8)", "matplotlib (>=3.6,<3.9)", "pillow (>=9.0,<11.0)", "psutil (>=5.9,<5.10)", "startorch (>=0.0.5,<0.0.8)", "tensorboard (>=2.10,<2.16)", "tqdm (>=4.64,<4.67)"]
 tb = ["tensorboard (>=2.10,<2.16)"]
 
 [[package]]
@@ -1310,6 +1310,22 @@ files = [
 pyyaml = "*"
 
 [[package]]
+name = "redcat"
+version = "0.0.17"
+description = "A library to manipulate batches of examples"
+optional = false
+python-versions = ">=3.9,<3.12"
+files = [
+    {file = "redcat-0.0.17-py3-none-any.whl", hash = "sha256:4c430f9d375a815b20ebfb49a3095a6aa003bb0020ca21a04edc1f239af7f2de"},
+    {file = "redcat-0.0.17.tar.gz", hash = "sha256:113c4eca93f401655c58437a2528c311b79065cb1fb5ce63df31b4e48ef79ce9"},
+]
+
+[package.dependencies]
+coola = ">=0.0.20,<0.0.25"
+numpy = ">=1.22,<1.27"
+torch = ">=1.11,<2.2"
+
+[[package]]
 name = "regex"
 version = "2023.10.3"
 description = "Alternative regular expression module, to replace re."
@@ -1479,6 +1495,26 @@ files = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
+
+[[package]]
+name = "startorch"
+version = "0.0.7"
+description = "synthetic time-series generator in PyTorch"
+optional = false
+python-versions = ">=3.9,<3.12"
+files = [
+    {file = "startorch-0.0.7-py3-none-any.whl", hash = "sha256:bcfc135248503efae2332500a428566b4b756633b359885d5ffa588a36952d0d"},
+    {file = "startorch-0.0.7.tar.gz", hash = "sha256:ac4eeb055c1a2dc94894f3e1f10233795b55eb64a0dd76ef04fe4c8cd3f4b596"},
+]
+
+[package.dependencies]
+coola = ">=0.0.20,<0.0.25"
+objectory = ">=0.0.7,<0.0.9"
+redcat = ">=0.0.16,<0.0.18"
+torch = ">=2.0,<2.2"
+
+[package.extras]
+all = ["matplotlib (>=3.6,<3.9)", "plotly (>=5.12,<5.18)"]
 
 [[package]]
 name = "sympy"
@@ -1788,4 +1824,4 @@ all = []
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.12"
-content-hash = "a129903618f4b9169888950e939c1f857a0325920001060faf3f5526da6b0df8"
+content-hash = "252c35b0da35cec5315f9dfe0ccc47c9cc0c011890991f3c7fb3b235857db7f7"
